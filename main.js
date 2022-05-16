@@ -54,6 +54,7 @@ function draw() {
       image(apple, x, y, 50, 50);
     }
     document.getElementById("status").innerHTML = to_number + " Apples drawn";
+    speak_data = to_number + "apples drawn";
     draw_apple = "";
     speak();
   }
@@ -61,8 +62,8 @@ function draw() {
 
 function speak() {
   var synth = window.speechSynthesis;
-  
-  speak_data = to_number + "Apples Drawn";
+
+  speak_data = "";
 
   var utterThis = new SpeechSynthesisUtterance(speak_data);
 
